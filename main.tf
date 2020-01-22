@@ -45,4 +45,11 @@ resource "aws_security_group" "consul_security_group" {
     to_port     = 0
   }
 
+  ingress {
+    cidr_blocks = var.cidr_blocks
+    protocol    = "tcp"
+    from_port   = var.wan_serf
+    to_port     = var.wan_serf
+  }
+
 }

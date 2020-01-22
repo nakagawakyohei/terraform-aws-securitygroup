@@ -17,3 +17,7 @@ output "cluster_rpc_port" {
 output "lan_serf" {
   value = var.lan_serf
 }
+
+variable "wan_serf" {
+  default = "8302"
+}
